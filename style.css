@@ -305,15 +305,3 @@ h3 a:hover {
   bottom: 0;
   line-height: 2.5em;
 }
-
-
-.subsection-title {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #150c21;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  border-left: 4px solid #146ebe;
-  padding-left: 0.5em;
-  background: #f6f8fa;
-}
