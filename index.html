@@ -652,6 +652,45 @@
 
     </div>
 
+
+
+
+<script>
+  // 初始化 Isotope
+  var $grid = $('.grid').isotope({
+    itemSelector: '.list-item',
+    layoutMode: 'fitRows',
+    transitionDuration: 0,
+    stagger: 10,
+    initLayout: false,
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function( itemElem ) {
+        var weight = $( itemElem ).find('.weight').text();
+        return parseFloat( weight.replace( /[\(\)]/g, '') );
+      }
+    }
+  });
+
+  // 监听所有图片加载完成后刷新布局
+  $(window).on('load', function() {
+    $grid.isotope('layout');
+  });
+
+  // 你的后续逻辑...
+</script>
+
+
+
+
+
+
+
+
+
     <script>
 
       // Isotope grid.
